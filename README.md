@@ -5,3 +5,4 @@ This repository provides Python scripts for CBCT projection dataset (https://hug
 It includes Python scripts:
 
 - Read and visualize CBCT projection data.
+- Reconstruct CBCT images using FDK algorithm.
