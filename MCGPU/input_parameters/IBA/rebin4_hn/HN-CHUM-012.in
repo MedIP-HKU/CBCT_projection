@@ -1,0 +1,25 @@
+# >>>> INPUT FILE FOR MC-GPU v1.3 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+# 
+#   Input file to reproduce IBA fantom images
+#
+#
+ 
+#[SECTION SIMULATION CONFIG v.2009-05-12]
+1E10                                              #  TOTAL NUMBER OF HISTORIES, OR SIMULATION TIME IN SECONDS IF VALUE < 100000
+58716                                             #  RANDOM SEED (ranecu PRNG) # test comment
+0                                                 #  GPU NUMBER TO USE WHEN MPI IS NOT USED, OR TO BE AVOIDED IN MPI RUNS
+512                                               #  GPU THREADS PER CUDA BLOCK (multiple of 32)
+299                                               #  SIMULATED HISTORIES PER GPU THREAD
+ 
+#[SECTION SOURCE v.2011-07-12]
+../../../machines/spectra/100kVp_IBA.spc                                                         #  X-RAY ENERGY SPECTRUM FILE
+25.647 -240.572 18.750                            #  SOURCE POSITION
+0.0 1.0 0.0                                       #  SOURCE DIRECTION COSINES: U V W
+-1 -1                                             #  POLAR AND AZIMUTHAL APERTURES FOR THE FAN BEAM [degrees] (input negative to cover the whole detector)
+ 
+#[SECTION IMAGE DETECTOR v.2009-12-02]
+../../../output/IBA/rebin4_hn/HN-CHUM-012/HN-CHUM-012                                                #  OUTPUT IMAGE FILE NAME
+180    180                                        #  NUMBER OF PIXELS IN THE IMAGE: Nx Nz
+42.62   42.62                                     #  IMAGE SIZE (width, height): Dx Dz [cm]
+316.0                                             #  SOURCE-TO-DETECTOR DISTANCE (detector set in front of the source, perpendicular to the initial direction)
+0 0                                 
